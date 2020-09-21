@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  payment-db:
+    image: postgres:latest
+    networks:
+      - payment-network
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - ./payment/scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  payment:
+    build:
+      context: .
+      dockerfile: payment/Dockerfile
+    networks:
+      - internal-network
+      - payment-network
+    ports:
+      - "7000:80"
+    depends_on:
+      - "payment-db"
+
+  auth:
+    build:
+      context: .
+      dockerfile: auth/Dockerfile
+    networks:
+      - internal-network
+    ports:
+      - "8000:80"
+
+  gateway:
+    build:
+      context: .
+      dockerfile: gateway/Dockerfile
+    depends_on:
+      - auth
+    networks:
+      - internal-network
+      - outside-world
+    ports:
+      - "9000:80"
+
+
+networks:
+  # everything that is *only* on "internal network" cannot talk to WAN
+  internal-network:
+    driver: "bridge"
+    internal: true
+  # add this network to a container to make it talk to the rest of the world
+  outside-world:
+  payment-network:

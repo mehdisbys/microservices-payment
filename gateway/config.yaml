@@ -1,0 +1,11 @@
+urls:
+  -
+    path: "/pay_user"
+    method: "POST"
+    http:
+      host: "payment"
+  -
+    path: "/get_transactions"
+    method: "POST"
+    http:
+      host: "payment"

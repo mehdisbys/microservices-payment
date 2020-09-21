@@ -1,0 +1,11 @@
+# This dockerfile is just for integration testing
+version: '3'
+services:
+  postgres-test:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
