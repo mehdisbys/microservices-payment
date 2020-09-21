@@ -1,5 +1,15 @@
  #### Payment System
 
+- [Ensuring Strong Payment Consistency](#ensuring-strong-payment-consistency)
+- [Installation steps](#installation-steps)
+- [API documentation](#api-documentation)
+  * [Authentication](#authentication)
+  * [**Sending Money to another user**](#--sending-money-to-another-user--)
+  * [**Retrieving a user's transaction historyr**](#--retrieving-a-user-s-transaction-historyr--)
+- [How to test](#how-to-test)
+  * [Feature Proposal : Ability to pay and convert to another currency](#feature-proposal---ability-to-pay-and-convert-to-another-currency)
+  * [Future possible improvements](#future-possible-improvements)
+
 As a payment system we need the ability to :
 - quickly scale in case there is a sudden surge in requests
 - be highly available in the event of failures
@@ -10,7 +20,7 @@ In this solution there are 3 services :
 
 ![](Schema.png)
 
-- A **gateway** where endpoints can be published. The gateway is the public interface of the application. Other services are part of a private network. Each request is authenticated before being proxied to the relevant service.
+- A **gateway** where endpoints can be published through a configuration file. The gateway is the public interface of the application. Other services are part of a private network. Each request is authenticated before being proxied to the relevant service.
 
 - An **auth** service which validate request using a simple matching pattern for the purpose of this application
 
