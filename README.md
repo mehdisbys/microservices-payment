@@ -1,5 +1,5 @@
 
-####Table of Contents
+##### Table of Contents
 
 - [Introduction](#introduction)
 - [Ensuring Strong Payment Consistency](#ensuring-strong-payment-consistency)
