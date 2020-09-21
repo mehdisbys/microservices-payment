@@ -1,5 +1,7 @@
- #### Payment System
 
+####Table of Contents
+
+- [Introduction](#introduction)
 - [Ensuring Strong Payment Consistency](#ensuring-strong-payment-consistency)
 - [Installation steps](#installation-steps)
 - [API documentation](#api-documentation)
@@ -9,6 +11,8 @@
 - [How to test](#how-to-test)
   * [Feature Proposal : Ability to pay and convert to another currency](#feature-proposal---ability-to-pay-and-convert-to-another-currency)
   * [Future possible improvements](#future-possible-improvements)
+
+#### Introduction
 
 As a payment system we need the ability to :
 - quickly scale in case there is a sudden surge in requests
