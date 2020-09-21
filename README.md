@@ -7,7 +7,7 @@
 - [API documentation](#api-documentation)
   * [Authentication](#authentication)
   * [**Sending Money to another user**](#--sending-money-to-another-user--)
-  * [**Retrieving a user's transaction historyr**](#--retrieving-a-user-s-transaction-historyr--)
+  * [**Retrieving a user's transaction history**](#--retrieving-a-user-s-transaction-historyr--)
 - [How to test](#how-to-test)
   * [Feature Proposal : Ability to pay and convert to another currency](#feature-proposal---ability-to-pay-and-convert-to-another-currency)
   * [Future possible improvements](#future-possible-improvements)
@@ -154,7 +154,7 @@ Responses :
 
 ----
 
-##### **Retrieving a user's transaction historyr**
+##### **Retrieving a user's transaction history**
 
 Endpoint : `/get_transactions`
 
