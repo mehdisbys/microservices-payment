@@ -6,8 +6,8 @@
 - [Installation steps](#installation-steps)
 - [API documentation](#api-documentation)
   * [Authentication](#authentication)
-  * [**Sending Money to another user**](#--sending-money-to-another-user--)
-  * [**Retrieving a user's transaction history**](#--retrieving-a-user-s-transaction-historyr--)
+  * [**Sending Money to another user**](#--sending-money-to-another-user)
+  * [**Retrieving a user's transaction history**](#--retrieving-a-user-s-transaction-history)
 - [How to test](#how-to-test)
   * [Feature Proposal : Ability to pay and convert to another currency](#feature-proposal---ability-to-pay-and-convert-to-another-currency)
   * [Future possible improvements](#future-possible-improvements)
@@ -125,7 +125,9 @@ All requests must be authenticated with the following HTTP headers :
 
 A `401` authorization code will be returned if authentication is unsuccessful
 
-##### **Sending Money to another user**
+-----
+
+##### Sending Money to another user
 Endpoint : `/pay_user`
 
 Description : Allows a user to send money to another user in our system
@@ -154,7 +156,7 @@ Responses :
 
 ----
 
-##### **Retrieving a user's transaction history**
+##### Retrieving a user's transaction history
 
 Endpoint : `/get_transactions`
 
